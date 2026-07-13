@@ -187,6 +187,57 @@ a:hover { color: var(--cian-600); }
   font-family: var(--f-mono); font-size: .82rem; color: var(--tinta-suave);
 }
 
+/* ---------- indicadores del hero ---------- */
+.indicadores {
+  margin-top: 2.3rem;
+  display: grid; gap: .8rem;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  max-width: 940px;
+  list-style: none;
+}
+.indicador {
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-chico);
+  padding: 1rem 1.2rem;
+  box-shadow: var(--sombra);
+}
+.indicador__valor {
+  font-family: var(--f-mono); font-weight: 700;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem); line-height: 1.05;
+  background: var(--grad-fuerte);
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent;
+}
+.indicador__nombre {
+  font-family: var(--f-mono); font-size: .66rem;
+  letter-spacing: .12em; text-transform: uppercase;
+  color: var(--tinta-suave); margin-top: .4rem;
+}
+
+/* ---------- línea de rol en cada expediente ---------- */
+.mi-rol {
+  margin-top: 1.1rem; max-width: 66ch;
+  background: var(--blanco);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-chico);
+  padding: .75rem 1.1rem;
+  position: relative; overflow: hidden;
+  box-shadow: var(--sombra);
+  font-size: .98rem;
+}
+.mi-rol::before {
+  content: "";
+  position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+  background: var(--grad);
+}
+.mi-rol strong {
+  display: block; margin-bottom: .15rem;
+  font-family: var(--f-mono); font-size: .66rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--cian-600);
+}
+
 /* ============================================================
    SECCIONES GENERALES
    ============================================================ */
